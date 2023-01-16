@@ -34,8 +34,6 @@ function typeText(element, text) {
 }
 
 // generate unique ID for each message div of bot
-// necessary for typing text effect for that specific reply
-// without unique ID, typing text will work on every element
 function generateUniqueId() {
     const timestamp = Date.now();
     const randomNumber = Math.random();
@@ -80,7 +78,6 @@ const handleSubmit = async (e) => {
     // to focus scroll to the bottom 
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
-    // specific message div 
     const messageDiv = document.getElementById(uniqueId)
 
     // messageDiv.innerHTML = "..."
